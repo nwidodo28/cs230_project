@@ -262,7 +262,7 @@ def main():
         # Embed the YouTube video from youtube
         st.markdown(f'<iframe width="560" height="315" src="https://www.youtube.com/embed/X-9EGfJu5rM?si=Kz9a0H3HAVnuTI2T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
                     unsafe_allow_html=True)
-        st.image('icon.svg',caption='Dispensary Store Front')
+        st.image('cs230_image',caption='Dispensary Store Front')
 
     elif page == "Find a Dispensary Near You":
         find_dispen()
