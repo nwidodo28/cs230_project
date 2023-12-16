@@ -23,7 +23,7 @@ license_type = {'Retail', 'Cultivate', 'Manufact', 'Operator', 'Co-Located', 'Co
 
 # Function to load data
 def load_data():
-    df_cannabis = pd.read_csv('/Users/nicklasw69/Desktop/CS230 - Python/project/cannabis_registry.csv')
+    df_cannabis = pd.read_csv('cannabis_registry.csv')
     return df_cannabis
 
 #Find Dispensary Near You Page
@@ -211,7 +211,7 @@ def show_bar_graph_based_on_town(df1):
 
 #Total Dispensary Data Page
 def bar_chart():
-    df_sales = pd.read_csv("/Users/nicklasw69/Desktop/CS230 - Python/project/cannabis_registry.csv")
+    df_sales = pd.read_csv('cannabis_registry.csv')
     df_sales = df_sales[df_sales['app_license_no'] != 'CAN538045']
 
     # Count occurrences of each app license category
@@ -227,7 +227,7 @@ def bar_chart():
     st.pyplot()
 
 def pie_chart():
-    df_pie = pd.read_csv("/Users/nicklasw69/Desktop/CS230 - Python/project/cannabis_registry.csv")
+    df_pie = pd.read_csv('cannabis_registry.csv')
     df_pie = df_pie[df_pie['app_license_no'] != 'CAN538045']
     # Count of each app license category
     license_type_counts = df_pie['app_license_category'].value_counts()
@@ -262,7 +262,7 @@ def main():
         # Embed the YouTube video from youtube
         st.markdown(f'<iframe width="560" height="315" src="https://www.youtube.com/embed/X-9EGfJu5rM?si=Kz9a0H3HAVnuTI2T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
                     unsafe_allow_html=True)
-        st.image('/Users/nicklasw69/Desktop/CS230 - Python/project/cs230_image.jpeg',caption='Dispensary Store Front')
+        st.image('icon.svg',caption='Dispensary Store Front')
 
     elif page == "Find a Dispensary Near You":
         find_dispen()
